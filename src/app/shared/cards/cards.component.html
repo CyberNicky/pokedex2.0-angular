@@ -1,0 +1,33 @@
+<div class="container">
+  <mat-card *ngFor="let pokemon of pokemonsPagination" class="container-card">
+    <img
+      mat-card-image
+      [src]="pokemon.sprites.front_default"
+      alt="pokemon"
+      srcset=""
+    />
+    <mat-card-content>
+      <p>{{ pokemon.name }}</p>
+
+      <button
+        mat-icon-button
+        matTooltip="Warn"
+        color="white"
+        aria-label="Example fab with a heart icon"
+      >
+        <mat-icon>favorite_outline</mat-icon>
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<mat-paginator
+  class="paginator"
+  #paginator
+  [length]="10"
+  [pageSize]="4"
+  showFirstLastButtons
+  aria-label="Select page"
+  (page)="onPageChange($event)"
+>
+</mat-paginator>

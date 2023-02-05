@@ -1,0 +1,35 @@
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+.container-card {
+  max-width: 400px;
+
+}
+
+.card-image {
+  background-size: cover;
+}
+
+mat-card {
+  width: 250px;
+  padding: 10px;
+}
+
+mat-card img{
+  object-fit: cover; /*this makes the image in src fit to the size specified below*/
+  max-height: 160px;
+  max-width: 160px;
+  align-self: center;
+}
+
+mat-card mat-card-content{
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
