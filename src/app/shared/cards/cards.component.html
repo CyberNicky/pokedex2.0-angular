@@ -10,12 +10,28 @@
       <p>{{ pokemon.name }}</p>
 
       <button
+        (click)="favoritePokemon(pokemon.name)"
         mat-icon-button
         matTooltip="Warn"
         color="white"
         aria-label="Example fab with a heart icon"
       >
-        <mat-icon>favorite_outline</mat-icon>
+        <mat-icon
+          color="{{ checkFavorite(pokemon.name) ? 'warn' : 'black' }}"
+          >{{
+            checkFavorite(pokemon.name) ? "favorite" : "favorite_outline"
+          }}</mat-icon
+        >
+      </button>
+
+      <button
+        (click)="checkFavorite(pokemon.name)"
+        mat-icon-button
+        matTooltip="Warn"
+        color="white"
+        aria-label="Example fab with a heart icon"
+      >
+        <mat-icon>{{ true ? "trash" : "favorite" }}</mat-icon>
       </button>
     </mat-card-content>
   </mat-card>

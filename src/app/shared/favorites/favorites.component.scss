@@ -1,0 +1,44 @@
+.favorites-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 4px;
+ 
+
+}
+.title-container{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemons-cards-container{
+  max-width: 400px;
+  padding-top: 20%;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+mat-card {
+  width: 270px;
+  padding: 10px;
+}
+
+.empty-message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px;
+}
+

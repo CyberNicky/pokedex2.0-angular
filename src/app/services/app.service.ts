@@ -12,6 +12,7 @@ export class PokemonService {
   private pokeData: PokemonData | any;
   private limit: number = 100;
   private offset: number = 0;
+  favoritePokemons: any;
   constructor(private http: HttpClient) {
     this.baseURL = environment.pokeApi;
   }

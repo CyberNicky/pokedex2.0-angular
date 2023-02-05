@@ -1,1 +1,32 @@
-<p>favorites works!</p>
+<div *ngIf="favoritesPokemons.length > 0" class="title-container">
+  <h1>Pokemons Favoritados!</h1>
+</div>
+<div class="container">
+  <div class="favorites-container">
+    <mat-card *ngFor="let pokemon of favoritesPokemons; let i = index">
+      <div class="pokemons-cards-container">
+        <p>{{ pokemon?.name }}</p>
+        <img
+          class="pokemon-image"
+          src="{{ pokemon?.sprites?.front_default }}"
+          alt="pokemon"
+          />
+          <button
+        (click)="deleteFavoritePokemon(pokemon.name)"
+        mat-icon-button
+        matTooltip="Warn"
+        color="white"
+        aria-label="Example fab with a heart icon"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+      </div>
+    </mat-card>
+  </div>
+</div>
+<div class="message-error">
+<mat-card *ngIf="!favoritesPokemons.length" class="empty-message">
+  <mat-icon>error</mat-icon>
+  <p>Você ainda não favoritou Pokemons!</p>
+</mat-card>
+</div>

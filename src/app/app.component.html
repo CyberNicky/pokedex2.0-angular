@@ -1,7 +1,8 @@
-<mat-toolbar >
+<mat-toolbar>
   <span>My Pokédex</span>
-  <span class="example-spacer"></span>
+  <span class="spacer"></span>
   <button
+    (click)="this.router.navigate(['favorites'])"
     mat-fab
     extended
     color="warn"
